@@ -1,0 +1,16 @@
+body{
+	background-color:orange;
+}
+
+#myBox{
+	width:100px;
+	height:100px;
+	background-color:black;
+}
+
+.mainP{
+	font-weight:bold;
+	font-family:sans-serif;
+	color:white;
+	font-size:16pt;
+}

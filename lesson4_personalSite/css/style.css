@@ -1,0 +1,60 @@
+body{
+	background:green;
+	color:white;
+	padding:0px;
+	margin:0px;
+}
+
+#container{
+	border:solid 1px white;
+	width:960px;
+	margin:0 auto;
+	height:100vh;
+}
+
+#banner{
+	height:100px;
+}
+
+#title{}
+
+#smpanel{}
+
+nav{
+
+}
+
+nav ul{
+	border:solid 1px white;
+	list-style:none;
+	padding:0px;
+}
+
+nav ul li{
+	border:solid 0px white;
+	display:inline-block;
+	width:24.5%;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	height:30px;
+	font-size:14pt;
+}
+
+nav ul li:hover{
+	background:white;
+	color:black;
+	cursor:pointer;
+}
+
+nav ul a {
+	color:white;
+}
+
+
+
+nav ul li a:hover{
+	color:black;
+}
+
+
