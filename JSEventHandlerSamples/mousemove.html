@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+	<style>
+		.hotspot{
+			width:10px;
+			height:10px;
+			background:rgba(0,0,0,1);
+			/*border:solid 1px black;*/
+			position:absolute;
+			z-index:1000;
+		}
+
+		.hotspot2{
+			width:10px;
+			height:10px;
+			border-radius:5px;
+			background:rgba(255,0,0,.1);
+			/*border:solid 1px black;*/
+			position:absolute;
+			z-index:1000;
+		}
+		.hotspot3{
+			width:500px;
+			height:500px;
+			border-radius:250px;
+			/*background:rgba(255,0,0,.1);*/
+			border:solid 1px blue;
+			position:absolute;
+			z-index:1000;
+		}
+		.hotspot4{
+			width:100px;
+			height:100px;
+			border-radius:5px;
+			/*background:rgba(255,0,0,.1);*/
+			border:solid 1px red;
+			position:absolute;
+			z-index:1000;
+		}
+		.hotspot5{
+			width:50px;
+			height:50px;
+			border-radius:25px;
+			background:rgba(0,255,0,.1);
+			/*border:solid 1px black;*/
+			position:absolute;
+			z-index:1000;
+		}
+		.hotspot6{
+			width:100px;
+			height:100px;
+			border-radius:50px;
+			background:rgba(0,0,255,.1);
+			/*border:solid 1px black;*/
+			position:relative;
+			/*z-index:1000;*/
+		}
+
+		#canvas{
+			width:400px;
+			height:400px;
+			border-radius:30px;
+			border:solid 1px black;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			var currentClass 	= 0
+			var classes 		= new Array();
+			classes[0] 			= 'hotspot';
+			classes[1] 			= 'hotspot2';
+			classes[2] 			= 'hotspot3';
+			classes[3] 			= 'hotspot4';
+			classes[4] 			= 'hotspot5';
+			classes[5] 			= 'hotspot6';
+			
+
+$(window).mousemove(function(event){
+console.log("mouse X: "+ event.pageX + " mouse Y: "+ event.pageY);
+console.log( $("#canvas").width() + " _ " + $("#canvas").height() );
+
+
+	//$("body").append("<div class='"+classes[currentClass]+"' style='top:"+event.pageY+"px; left:"+event.pageX+"px;'></div>");
+	if(event.pageX > 10 && event.pageX < 400 && event.pageY > 10 && event.pageY < 400 ){
+		$("#canvas").append("<div class='"+classes[currentClass]+"' style='top:"+event.pageY+"px; left:"+event.pageX+"px;'></div>");
+	}
+
+
+
+});
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+			$(window).click(function(){
+
+				currentClass = getRandomInt(0, 5);
+				// if(currentClass === 0){
+				// 	currentClass = 1;
+				// }else if(currentClass === 1){
+				// 	currentClass = 0;
+				// }
+
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div id="canvas"></div>
+</body>
+</html>

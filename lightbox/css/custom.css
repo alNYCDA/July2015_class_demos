@@ -1,0 +1,49 @@
+body{
+	background:green;
+	padding:0px;
+	margin:0px;
+}
+
+#lightbox{
+	position:absolute;
+	z-index:1000;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.3);
+	display:none;
+}
+
+#lightBoxContentBox{
+	width:50%;
+	height:50%;
+	background:white;
+	border-radius:30px;
+	/* THIS IS HOW I PUT A DIV IN THE MIDDLE */
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	margin:auto;
+
+	/*padding:30px;*/
+}
+
+#closeBtn{
+
+	cursor:pointer;
+
+}
+
+.thumb{
+	width:20%;
+	height:auto;
+}
+
+.lb_img{
+	width:90%;
+	height:auto;
+}
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!--jQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+
+    		
+
+    		$(window).mouseup(function(){
+    			$("body").css("backgroundColor", "yellow");
+    		});
+
+    		$(window).click(function(){
+
+    			$("body").css("backgroundColor", "red");
+    			$()
+    		});
+
+    		$(window).on('wheel', function(){
+
+    			$("body").append("<h1>:)</h1>");
+    			$(window).trigger("click")
+    		});
+
+
+    	});
+    </script>
+</head>
+<body>
+	
+</body>
+</html>

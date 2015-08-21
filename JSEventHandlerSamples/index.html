@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/html2canvas.js?rev032"></script> 
+	<style>
+		body{
+			background:black;
+		}
+
+		#wrap{
+			width:100vw;
+			height:100vh;
+		}
+
+		#ball{
+			width:200px;
+			height:200px;
+			border-radius:100px;
+			background:red;
+			position:relative;
+			top:0px;
+			left:50%;
+			display:none;
+		}
+
+		.hotSpot{
+			/*background:rgba(255,0,0,0.1);*/
+			width:500px;
+			height:500px;
+			border-radius:250px;
+			border:solid 1px red;
+			position:absolute;
+			z-index:100;
+			margin-left:-250px;
+			margin-top:-250px;
+		}
+
+		nav{
+			background:rgba(255,255,255,.8);
+			width:400px;
+			height:50px;
+			position:absolute;
+			z-index:200;
+			top:0px;
+			left:40%;
+			margin-left:auto;
+			margin-right:auto;
+			border-bottom-left-radius:30px;
+			border-bottom-right-radius:30px;
+		}
+	</style>
+	<script>
+
+	$(document).ready(function(){
+
+		var winBottom = $(window).height();
+		console.log("window bottom: "+winBottom);
+
+		$(window).mousemove(function(event){
+			console.log("mouse x: "+event.pageX);
+			console.log("mouse y: "+event.pageY);
+			$("#wrap").append("<div class='hotSpot' style='top:"+event.pageY+"px; left:"+event.pageX+"px;' ></div>")
+		});
+
+		
+		$("#ball").click(function(){
+
+
+
+		});
+
+		$(window).click(function(){
+			//$("#wrap").html("")
+			//takeSnapShot();
+		});
+
+		function takeSnapShot(){
+			var target = $('body');
+			  html2canvas(target, {
+			  onrendered: function(canvas) {
+			    var data = canvas.toDataURL();
+			    console.log(data);
+			    document.body.innerHTML="<img src="+data+" />";
+			   }
+			 });
+		}
+	});
+
+	</script>
+</head>
+<body>
+<nav>
+
+</nav>
+<div id="ball"></div>
+
+<div id="wrap">
+
+	
+	
+</div>
+</body>
+</html>
